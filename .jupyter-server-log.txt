@@ -139,3 +139,50 @@ Launching jupyter-lab
 [W 2026-03-13 13:31:01.221 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
     Setting websocket_ping_timeout=30000
 [I 2026-03-13 13:31:28.691 ServerApp] Saving file at /usercogs/basic.py
+Launching jupyter-lab
+[W 2026-03-13 13:43:39.400 ServerApp] ServerApp.token config is deprecated in 2.0. Use IdentityProvider.token.
+[I 2026-03-13 13:43:39.454 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-03-13 13:43:39.454 ServerApp] jupyter_offlinenotebook | extension was successfully linked.
+[I 2026-03-13 13:43:39.454 ServerApp] jupyter_resource_usage | extension was successfully linked.
+[I 2026-03-13 13:43:39.457 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[W 2026-03-13 13:43:39.459 LabApp] 'base_url' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-03-13 13:43:39.459 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-03-13 13:43:39.459 LabApp] 'trust_xheaders' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-03-13 13:43:39.459 LabApp] 'allow_origin' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2026-03-13 13:43:39.459 LabApp] 'allow_origin_pat' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[I 2026-03-13 13:43:39.461 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-03-13 13:43:39.493 ServerApp] notebook | extension was successfully linked.
+[I 2026-03-13 13:43:39.714 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-03-13 13:43:39.728 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-03-13 13:43:39.729 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-03-13 13:43:39.730 ServerApp] jupyter_offlinenotebook | extension was successfully loaded.
+[I 2026-03-13 13:43:39.730 ServerApp] jupyter_resource_usage | extension was successfully loaded.
+[I 2026-03-13 13:43:39.731 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-03-13 13:43:39.733 LabApp] JupyterLab extension loaded from /srv/conda/envs/notebook/lib/python3.10/site-packages/jupyterlab
+[I 2026-03-13 13:43:39.733 LabApp] JupyterLab application directory is /srv/conda/envs/notebook/share/jupyter/lab
+[I 2026-03-13 13:43:39.733 LabApp] Extension Manager is 'pypi'.
+[I 2026-03-13 13:43:39.765 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-03-13 13:43:39.768 ServerApp] notebook | extension was successfully loaded.
+[I 2026-03-13 13:43:39.768 ServerApp] Will shut down after 600 seconds with no kernels.
+[I 2026-03-13 13:43:39.769 ServerApp] Serving notebooks from local directory: /home/jovyan
+[I 2026-03-13 13:43:39.769 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2026-03-13 13:43:39.769 ServerApp] http://jupyter-ziolkoplayscode-selfbot-qgnnexvp:8888/user/ziolkoplayscode-selfbot-qgnnexvp/lab?token=...
+[I 2026-03-13 13:43:39.769 ServerApp]     http://127.0.0.1:8888/user/ziolkoplayscode-selfbot-qgnnexvp/lab?token=...
+[I 2026-03-13 13:43:39.769 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2026-03-13 13:43:39.778 ServerApp] No web browser found: Error('could not locate runnable browser').
+[I 2026-03-13 13:43:40.031 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2026-03-13 13:43:41.027 ServerApp] 302 GET /user/ziolkoplayscode-selfbot-qgnnexvp/?token=[secret] (@168.11.166.18) 0.77ms
+[I 2026-03-13 13:43:47.854 LabApp] Build is up to date
+[I 2026-03-13 13:43:50.522 ServerApp] New terminal with automatic name: 1
+[W 2026-03-13 13:43:51.261 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[I 2026-03-13 13:45:52.222 ServerApp] Saving file at /usercogs/basic.py
+[I 2026-03-13 13:47:52.848 ServerApp] Saving file at /usercogs/basic.py
+[I 2026-03-13 13:49:53.386 ServerApp] Saving file at /usercogs/basic.py
+[I 2026-03-13 13:51:54.820 ServerApp] Saving file at /usercogs/basic.py
+[I 2026-03-13 13:53:55.760 ServerApp] Saving file at /usercogs/basic.py
+[I 2026-03-13 13:55:56.368 ServerApp] Saving file at /usercogs/basic.py
+[I 2026-03-13 13:57:56.955 ServerApp] Saving file at /usercogs/basic.py
+[I 2026-03-13 13:59:57.448 ServerApp] Saving file at /usercogs/basic.py
+[I 2026-03-13 14:01:58.804 ServerApp] Saving file at /usercogs/basic.py
+[I 2026-03-13 14:02:33.499 ServerApp] Saving file at /usercogs/basic.py

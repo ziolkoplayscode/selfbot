@@ -28,6 +28,7 @@ class Basic(Cog):
 
     @commands.command()
     async def colors(self, ctx, color1, color2=None, color3=None, mixmode='Average'):
+        channel = self.user.get_channel(ctx.channel.id)
         coloramount = 3 if color2 and color3 else 2 if color2 or color3 else 1
         color1rgb = color1.lstrip('#')
         if len(color1) == 3:
@@ -50,9 +51,14 @@ class Basic(Cog):
         if mixmode == 'Average':
             colorresult = ((color1rgb[0]+color2rgb[0]+color3rgb[0])/coloramount, (color1rgb[1]+color2rgb[1]+color3rgb[1])/coloramount, (color1rgb[2]+color2rgb[2]+color3rgb[2])/coloramount)
         elif mixmode == 'Additive':
-            maxcolor = max(color1rgb[0], color2rgb[0]
-        
+            maxcolor = max(color1rgb[0]+color2rgb[0]+color3rgb[0], color1rgb[1]+color2rgb[1]+color3rgb[1], color1rgb[2]+color2rgb[2]+color3rgb[2], 255)
+            colorresult = (((color1rgb[0]+color2rgb[0]+color3rgb[0])/maxcolor)*255,((color1rgb[1]+color2rgb[1]+color3rgb[1])/maxcolor)*255,((color1rgb[2]+color2rgb[2]+color3rgb[2])/maxcolor)*255)
+        elif mixmode == 'Subtractive':
+            maxcolor = max((255-color1rgb[0])+(255-color2rgb[0])+(255-color3rgb[0]), (255-color1rgb[1])+(255-color2rgb[1])+(255-color3rgb[1]), (255-color1rgb[2])+(255-color2rgb[2])+(255-color3rgb[2]))
+            colorresult = (255-(((255-color1rgb[0])+(255-color2rgb[0])+(255-color3rgb[0])/maxcolor)*255),255-(((255-color1rgb[1])+(255-color2rgb[1])+(255-color3rgb[1])/maxcolor)*255),255-(((255-color1rgb[2])+(255-color2rgb[2])+(255-color3rgb[2])/maxcolor)*255))
 
+        hexcode = "#{:02x}{:02x}{:02x}".format(*colorresult)
+        channel.send(f"https://singlecolorimage.com/get/{hexcode}/100x100")
 async def setup(user):
     await user.add_cog(Basic(user, bot))
     
