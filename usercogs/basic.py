@@ -48,8 +48,9 @@ class Basic(Cog):
             color3rgb = (0,0,0)
         
         if mixmode == 'Average':
-            
-            colorresult = (color1rgb+color2rgb+color3rgb)
+            colorresult = ((color1rgb[0]+color2rgb[0]+color3rgb[0])/coloramount, (color1rgb[1]+color2rgb[1]+color3rgb[1])/coloramount, (color1rgb[2]+color2rgb[2]+color3rgb[2])/coloramount)
+        elif mixmode == 'Additive':
+            maxcolor = max(color1rgb[0], color2rgb[0]
         
 
 async def setup(user):
