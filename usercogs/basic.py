@@ -25,6 +25,31 @@ class Basic(Cog):
     async def petpet(self, ctx, user: selfcord.User):
         channel = self.user.get_channel(ctx.channel.id)
         await channel.send(f'https://tt7homa.eu.pythonanywhere.com/petpet.gif?image={user.avatar.url}')
+
+    @commands.command()
+    async def colors(self, ctx, color1, color2=None, color3=None, mixmode='Average'):
+        coloramount = 3 if color2 and color3 else 2 if color2 or color3 else 1
+        color1rgb = color1.lstrip('#')
+        if len(color1) == 3:
+            color1rgb = "".join([c*2 for c in color1rgb])
+        color1rgb = tuple(int(color1rgb[i:i+2], 16) for i in (0, 2, 4))
+        if color2:
+            color2rgb = color2.lstrip('#')
+            if len(color2) == 3:
+                color1rgb = "".join([c*2 for c in color1rgb])
+            color2rgb = tuple(int(color2rgb[i:i+2], 16) for i in (0, 2, 4))
+        else color2rgb = (0,0,0)
+        if color3:
+            color3rgb = color3.lstrip('#')
+            if len(color3) == 3:
+                color3rgb = "".join([c*2 for c in color3rgb])
+            color3rgb = tuple(int(color3rgb[i:i+2], 16) for i in (0, 2, 4))
+        else: 
+            color3rgb = (0,0,0)
+        
+        if mixmode == 'Average':
+            
+            colorresult = (color1rgb+color2rgb+color3rgb)
         
 
 async def setup(user):
