@@ -22,7 +22,7 @@ class Basic(Cog):
         await ctx.send(f"It is {now.strftime('%H:%M')} for me right now.")
 
     @commands.command()
-    async def petpet(self, ctx, user: selfcord.Member):
+    async def petpet(self, ctx, user: selfcord.User):
         channel = self.user.get_channel(ctx.channel.id)
         await channel.send(f'https://tt7homa.eu.pythonanywhere.com/petpet.gif?image={user.avatar.url}')
         
